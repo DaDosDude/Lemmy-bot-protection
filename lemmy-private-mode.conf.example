@@ -1,0 +1,24 @@
+# /etc/lemmy-private-mode.conf
+# Overrides for lemmy-private-mode. Uncomment what you need.
+
+#ON_AT=5
+#OFF_AT=3
+#COOLDOWN_SECS=300
+
+#DB_USER=lemmy
+#DB_NAME=lemmy
+
+# Leave PSQL unset to auto-detect. Set it if auto-detection picks the wrong
+# database or can't find it. It must run ONE SQL statement given as the last
+# argument and print bare values (-tA).
+# Docker (check `docker ps` for your Postgres container name):
+#PSQL="docker exec lemmy-postgres-1 psql -U lemmy -d lemmy -tAc"
+# Non-Docker install (password via root's ~/.pgpass, or inline):
+#PSQL="psql -w -h 127.0.0.1 -U lemmy -d lemmy -tAc"
+#PSQL="PGPASSWORD=secret psql -h 127.0.0.1 -U lemmy -d lemmy -tAc"
+
+# Give up on a database call after this many seconds
+#SQL_TIMEOUT=20
+
+#LOG=/var/log/lemmy-private-mode.log
+#STATE_DIR=/var/lib/lemmy-private-mode
